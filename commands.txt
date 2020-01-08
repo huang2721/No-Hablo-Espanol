@@ -1,3 +1,10 @@
+curl -X POST -u "apikey:QO6Rj8oWPbPJtN8cCETL4RsA5WHlDNAVEoWgAT_L33mH" ^
+--header "Content-Type: audio/flac" ^
+--data-binary @audio-file.flac ^
+"https://api.us-east.speech-to-text.watson.cloud.ibm.com/instances/88abb65f-7ae0-44fc-bb7f-a88e6d5031ac/v1/recognize"
+
+
+
 curl -X POST -u "apikey:rlYYbQbqwdrzFpndaGRbb8V7q7afmfFxKZ9IBeLQ5r7J" ^
 --header "Content-Type: application/json" ^
 --header "Accept: audio/wav" ^
