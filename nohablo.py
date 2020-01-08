@@ -19,10 +19,15 @@ def main():
     data = open('./audio-file.flac', 'rb').read()
 
     r = requests.post(url, data =  data , auth = auth , headers = headers)
-    text = r.json()['results'][0]['alternatives'][0]['transcript']
+    english_text = r.json()['results'][0]['alternatives'][0]['transcript']
     
     #translator
-
+    url = language_translator_url + '/v3/translate?version=2018-05-01'
+    headers = {'Content-Type': 'application/json'}
+    auth = ("apikey", language_translator_api_key)
+    payload = {'text' : [english_text] , 'model_id' : 'en-es'}
+    r = requests.post(url, data = json.dumps(payload), auth = auth, headers = headers)
+    spanish_text = r.json()['translations'][0]['translation']
 
     
 if __name__ == "__main__":
