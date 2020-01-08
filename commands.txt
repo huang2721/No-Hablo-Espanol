@@ -1,0 +1,10 @@
+curl -X POST -u "apikey:rlYYbQbqwdrzFpndaGRbb8V7q7afmfFxKZ9IBeLQ5r7J" ^
+--header "Content-Type: application/json" ^
+--header "Accept: audio/wav" ^
+--data "{\"text\":\"hello world\"}" ^
+--output hello_world.wav ^
+"https://api.us-east.text-to-speech.watson.cloud.ibm.com/instances/0102f85d-c4cd-4cc3-928e-3c7482e01e0f/v1/synthesize"
+
+
+
+curl -X POST -u "apikey:uHSQ5qFc8bepT-FACslFzxsuD4btr-lnL27RgZwYcMY1" --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world! \", \"How are you?\"], \"model_id\":\"en-es\"}" "https://api.us-east.language-translator.watson.cloud.ibm.com/instances/e25a4ca7-9b06-435d-a187-dea3e5d0030b/v3/translate?version=2018-05-01"
