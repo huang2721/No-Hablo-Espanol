@@ -68,6 +68,7 @@ def main():
     # play translation
     print('Playing translation...')
     os.system(output_filename)
+    sys.exit()
 
 if __name__ == "__main__":
     main()
