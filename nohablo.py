@@ -31,8 +31,8 @@ def main():
         print(t)
         time.sleep(1)
         t -= 1
-    print("Start speaking...")
     myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
+    print("Start speaking...")
     sd.wait()  # Wait until recording is finished
     print("Recording finished...")
     write(input_filename, fs, myrecording)  # Save as WAV file 
